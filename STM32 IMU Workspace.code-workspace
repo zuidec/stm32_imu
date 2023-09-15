@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"name": "STM32_IMU",
+			"path": "."
+		},
+		{
+			"name": "STM32 Bootloader",
+			"path": "../STM32 Bootloader"
+		},
+		{
+			"path": "../stm32_shared"
+		}
+	],
+	"settings": {
+		"C/C++ Include Guard.Path Skip": 0,
+		"files.associations": {
+			"memorymap.h": "c",
+			"timer.h": "c"
+		}
+	}
+}

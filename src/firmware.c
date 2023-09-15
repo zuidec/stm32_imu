@@ -1,10 +1,10 @@
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/gpio.h>
 #include <libopencm3/cm3/scb.h>
-
-//#include "stm32_shared/include/core/system.h"
-#include "../../stm32_shared/include/core/system.h"
-#include "../../stm32_shared/include/core/timer.h"
+#include "core/system.h"
+#include "core/timer.h"
+//#include <stm32_shared/include/core/system.h>
+//#include <stm32_shared/include/core/timer.h>
 
 #define LED_PORT            (GPIOA)
 #define LED_PIN             (GPIO0)

@@ -1,0 +1,83 @@
+// AUTOMATICALLY GENERATED FILE. PLEASE DO NOT MODIFY IT MANUALLY
+//
+// PIO Unified Debugger
+//
+// Documentation: https://docs.platformio.org/page/plus/debugging.html
+// Configuration: https://docs.platformio.org/page/projectconf/section_env_debug.html
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceFolder}",
+            "executable": "./firmware.elf",
+            "name": "IMU: Debug with ST-Link",
+            "request": "launch",
+            "type": "cortex-debug",
+            "armToolchainPath": "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/12.3 rel1/bin",
+            "runToEntryPoint": "main",
+           // "showDevDebugOutput": "raw",
+            "servertype": "stutil",
+            "device": "STM32F411CE",
+            "preLaunchTask": "build_debug",
+            //"gdbPath": "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/12.3 rel1/bin/arm-none-eabi-gdb.exe",
+            //"stlinkPath": "C:/Program Files (x86)/st-tools/stlink-1.7.0-x86_64-w64-mingw32/bin/",
+            "serverpath": "C:/Program Files (x86)/st-tools/stlink-1.7.0-x86_64-w64-mingw32/bin/st-util.exe"
+            //"stm32cubeprogrammer": "C:/Program Files/ST/STM32CubeIDE_1.11.2/STM32CubeIDE/STLinkServer"
+
+        },
+        {
+            "cwd": "${workspaceFolder}../stm32_bootloader/",
+            "executable": "./bootloader.elf",
+            "name": "Bootloader: Debug with ST-Link",
+            "request": "launch",
+            "type": "cortex-debug",
+            "armToolchainPath": "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/12.3 rel1/bin",
+            "runToEntryPoint": "main",
+           // "showDevDebugOutput": "raw",
+            "servertype": "stutil",
+            "device": "STM32F411CE",
+            "preLaunchTask": "build_bootloader",
+            //"gdbPath": "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/12.3 rel1/bin/arm-none-eabi-gdb.exe",
+            //"stlinkPath": "C:/Program Files (x86)/st-tools/stlink-1.7.0-x86_64-w64-mingw32/bin/",
+            "serverpath": "C:/Program Files (x86)/st-tools/stlink-1.7.0-x86_64-w64-mingw32/bin/st-util.exe"
+            //"stm32cubeprogrammer": "C:/Program Files/ST/STM32CubeIDE_1.11.2/STM32CubeIDE/STLinkServer"
+
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug",
+            "executable": "C:/Users/svens/Documents/Programming/platformio/STM32_IMU/.pio/build/stm32_imu/firmware.elf",
+            "projectEnvName": "stm32_imu",
+            "toolchainBinDir": "C:/Users/svens/.platformio/packages/toolchain-gccarmnoneeabi/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "C:/Users/svens/.platformio/platforms/ststm32/misc/svd/STM32F411xx.svd",
+            "preLaunchTask": {
+                "type": "PlatformIO",
+                "task": "Pre-Debug"
+            }
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (skip Pre-Debug)",
+            "executable": "C:/Users/svens/Documents/Programming/platformio/STM32_IMU/.pio/build/stm32_imu/firmware.elf",
+            "projectEnvName": "stm32_imu",
+            "toolchainBinDir": "C:/Users/svens/.platformio/packages/toolchain-gccarmnoneeabi/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "C:/Users/svens/.platformio/platforms/ststm32/misc/svd/STM32F411xx.svd"
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (without uploading)",
+            "executable": "C:/Users/svens/Documents/Programming/platformio/STM32_IMU/.pio/build/stm32_imu/firmware.elf",
+            "projectEnvName": "stm32_imu",
+            "toolchainBinDir": "C:/Users/svens/.platformio/packages/toolchain-gccarmnoneeabi/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "C:/Users/svens/.platformio/platforms/ststm32/misc/svd/STM32F411xx.svd",
+            "loadMode": "manual"
+        }
+    ]
+}

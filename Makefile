@@ -63,6 +63,7 @@ OBJS		+= $(SRC_DIR)/bootloader.o	# This is the .o file made by bootloader.S that
 OBJS		+= $(SHARED_SRC_DIR)/core/system.o
 OBJS		+= $(SHARED_SRC_DIR)/core/timer.o
 OBJS		+= $(SHARED_SRC_DIR)/core/uart.o
+OBJS		+= $(SHARED_SRC_DIR)/core/fifo.o
 
 ###############################################################################
 # C flags

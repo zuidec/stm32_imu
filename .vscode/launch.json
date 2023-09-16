@@ -16,7 +16,7 @@
             "type": "cortex-debug",
             "armToolchainPath": "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/12.3 rel1/bin",
             "runToEntryPoint": "main",
-           // "showDevDebugOutput": "raw",
+            "showDevDebugOutput": "none",
             "servertype": "stutil",
             "device": "STM32F411CE",
             "preLaunchTask": "build_debug",

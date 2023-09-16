@@ -18,7 +18,10 @@
 		"C/C++ Include Guard.Path Skip": 0,
 		"files.associations": {
 			"memorymap.h": "c",
-			"timer.h": "c"
+			"timer.h": "c",
+			"uart.h": "c",
+			"usart.h": "c",
+			"rcc.h": "c"
 		}
 	}
 }

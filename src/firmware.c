@@ -51,17 +51,27 @@ int main(void)  {
     float duty_cycle = 0.0f;
 
     timer_pwm_set_duty_cycle(duty_cycle);
-
+    static bool duty_cycle_imcrement = true;
     while(1)    {
         
         if(system_get_ticks() - start_time >= 50) {
             
-            // Increment duty cycle then reset
-            duty_cycle += 1.0f;
-            if(duty_cycle > 100.0f)   {
-                duty_cycle = 0.0f;
-            }
+           if(duty_cycle_imcrement) {
+           
+                // Increment duty cycle then reset
+                duty_cycle += 1.0f;
+                if(duty_cycle >= 50.0f)   {
 
+                    duty_cycle_imcrement = false;
+                }
+           }
+           else{
+                duty_cycle -= 1.0f;
+                if(duty_cycle <= 0.0f)   {
+
+                    duty_cycle_imcrement = true;
+                }
+           }
             // Update PWM duty cycle
             timer_pwm_set_duty_cycle(duty_cycle);
             start_time = system_get_ticks();
@@ -72,7 +82,7 @@ int main(void)  {
             uint8_t data = uart_read_byte();
             uart_write_byte(data +1);
         }
-        system_delay(1000);
+        //system_delay(1000);
     }
     return 0;   // Never return
 }

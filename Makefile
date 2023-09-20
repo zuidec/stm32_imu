@@ -60,10 +60,16 @@ CSTD		?= -std=c99
 
 OBJS		+= $(SRC_DIR)/$(BINARY).o
 OBJS		+= $(SRC_DIR)/bootloader.o	# This is the .o file made by bootloader.S that contains the bootloader bin
+OBJS		+= $(SRC_DIR)/info.o
+
 OBJS		+= $(SHARED_SRC_DIR)/core/system.o
 OBJS		+= $(SHARED_SRC_DIR)/core/timer.o
 OBJS		+= $(SHARED_SRC_DIR)/core/uart.o
 OBJS		+= $(SHARED_SRC_DIR)/core/fifo.o
+OBJS		+= $(SHARED_SRC_DIR)/core/comms.o
+OBJS		+= $(SHARED_SRC_DIR)/core/crc.o
+OBJS		+= $(SHARED_SRC_DIR)/core/bootloader-flash.o
+OBJS		+= $(SHARED_SRC_DIR)/core/simple-timer.o
 
 ###############################################################################
 # C flags
